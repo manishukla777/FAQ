@@ -10,6 +10,18 @@
     
 });
 
+var getLeftNavInnerHTML = function(leftNavItemsArray) {
+  return `${leftNavItemsArray.map((item, index) => 
+    `<div class="col span-1-of-6 box">
+        <div class="contact-feature footer-nav">${item}</div>
+        <i class="ion-ios-plus-empty icon-small"></i> 
+     </div>`
+  ).join('')}`
+}
+
+document.querySelector('.left-nav').innerHTML = getLeftNavInnerHTML(['Basics','Mobile','Account','Payments','Privacy','Delivery'])
+
+
 var listener = function () {
   var highlightedItems = document.querySelectorAll(".faq-container");
 
@@ -116,10 +128,6 @@ var getInnerHTML = function (headingText, questions) {
     </div>`
 }
 
-document.querySelector('.about-publications').innerHTML = getInnerHTML('Basics', getQuestions('Basics'))
-listener();
-
-
 var getMobileInnerHTML = function (headingText, questions) {
   return `
     <div>
@@ -136,6 +144,11 @@ var getMobileInnerHTML = function (headingText, questions) {
         </div>`
     ).join('')}`
 }
+
+
+
+document.querySelector('.about-publications').innerHTML = getInnerHTML('Basics', getQuestions('Basics'))
+listener();
 
 
   // Get the modal

@@ -141,7 +141,7 @@ header {
     background-size: cover;
     background-position: center;
     text-align: center;
-    height: 20vh;
+    height: 160px;
 
     display:flex;
     align-items: center;
@@ -445,6 +445,7 @@ footer .col {
 
 .faq-container ul li {
     color: #aac157;
+    max-width: 86%;
 }
 
 .faq-content-0,
